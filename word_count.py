@@ -1,6 +1,5 @@
 import os
-import tkinter as tk
-from tkinter import filedialog
+from utils import choose_folder
 
 def check_word_count_in_files(folder_path, min_word_count):
     files_below_word_count = []
@@ -26,11 +25,7 @@ def check_text_length_in_files(folder_path, min_text_length):
                     files_below_text_length.append(file_name)
     return files_below_text_length
 
-def choose_folder():
-    root = tk.Tk()
-    root.withdraw()
-    folder_path = filedialog.askdirectory(title="Select the folder containing txt files")
-    return folder_path
+
 
 if __name__ == "__main__":
     preference = input("[1] Word count \n[2] Text Length\nEnter your preference:")

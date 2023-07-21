@@ -1,6 +1,6 @@
 import os
-import tkinter as tk
-from tkinter import filedialog
+from utils import choose_folder
+
 
 def find_files_with_intersection(folder_path, should_have_words, should_not_have_words):
     matching_files = []
@@ -13,11 +13,6 @@ def find_files_with_intersection(folder_path, should_have_words, should_not_have
                     matching_files.append(file_name)
     return matching_files
 
-def choose_folder():
-    root = tk.Tk()
-    root.withdraw()
-    folder_path = filedialog.askdirectory(title="Select the folder containing txt files")
-    return folder_path
 
 if __name__ == "__main__":
     should_have_words_input = input("Enter words that should be present in the files (comma-separated list): ")

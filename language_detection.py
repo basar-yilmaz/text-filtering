@@ -1,7 +1,7 @@
 import os
 from langdetect import detect_langs
-import tkinter as tk
-from tkinter import filedialog
+from utils import choose_folder
+
 
 def detect_language(text):
     # Detect the language probabilities using detect_langs
