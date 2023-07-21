@@ -31,12 +31,6 @@ def detect_non_english_files(folder_path):
                     non_english_files.append(f"{file_name}, lang: {detected_language}")
     return non_english_files
 
-def choose_folder():
-    root = tk.Tk()
-    root.withdraw() 
-    folder_path = filedialog.askdirectory(title="Select the folder containing txt files")
-    return folder_path
-
 if __name__ == "__main__":
     folder_path = choose_folder()
     if not folder_path:
